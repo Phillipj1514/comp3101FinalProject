@@ -136,6 +136,22 @@ function verticalArrow(x,y,scale) {
     context.fill();
 }
 
+// Function to draw a horizontal double-headed arrow at pos(x,y) and size(scale)
+function horizontalArrow(x,y,scale) {
+    context.beginPath();
+    context.moveTo(x,y);
+    context.lineTo(x-scale,y+(scale*2));
+    context.lineTo(x,y+(scale*4));
+    context.lineTo(x,y+(scale*3));
+    context.lineTo(x+(scale*4),y+(scale*3));
+    context.lineTo(x+(scale*4),y+(scale*4));
+    context.lineTo(x+(scale*5),y+(scale*2));
+    context.lineTo(x+(scale*4),y);
+    context.lineTo(x+(scale*4),y+scale);
+    context.lineTo(x,y+scale);
+    context.fill();
+}
+
 // MAIN METHOD
 main = () => {
     drawComponent(processor);
@@ -150,6 +166,7 @@ main = () => {
     verticalArrow(processor.x+(processor.width/2)-3,driver.y+driver.height+10,14);
     verticalArrow(controller.x+(controller.width/2)-3,device.y+device.height+10,14);
     verticalArrow(dma.x+(dma.width/2)-3,controller.y+controller.height+10,17);
+    horizontalArrow(driver.x+driver.width + 40,driver.y,20);
 }
 
 main();
