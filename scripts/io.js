@@ -1,6 +1,17 @@
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
+// The Operating System component
+const os = {
+    name: "Operating System",
+    x: 10,
+    y: 220,
+    width: 120,
+    height: 150,
+    color: "#d9534f",
+    style: "fill"
+}
+
 // The processer component
 const processor = {
     name: "Processor",
@@ -113,7 +124,7 @@ function drawComponent(obj) {
     }
     context.lineWidth = 3;
     context.fillStyle = "black";
-    context.font = "13px Comic Sans MS";
+    context.font = "13px Arial";
     context.textAlign = "center";
     context.fillText(obj.name, obj.x+(obj.width)/2, obj.y+(obj.height)/2);
     context.fill()
@@ -171,6 +182,7 @@ function diagonalArrow(x,y) {
 
 // MAIN METHOD
 main = () => {
+    drawComponent(os);
     drawComponent(processor);
     drawComponent(memory);
     drawComponent(dma);
