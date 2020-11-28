@@ -152,6 +152,22 @@ function horizontalArrow(x,y,scale) {
     context.fill();
 }
 
+// Function to draw a diagonal double-headed arrow
+function diagonalArrow() {
+    context.beginPath();
+    context.moveTo(315,88);
+    context.lineTo(348,70);
+    context.lineTo(340,100);
+    context.lineTo(448,205);
+    context.lineTo(455,170);
+    context.lineTo(465,235);
+    context.lineTo(435,260);
+    context.lineTo(442,230);
+    context.lineTo(335,125);
+    context.lineTo(327,155);
+    context.fill();
+}
+
 // MAIN METHOD
 main = () => {
     drawComponent(processor);
@@ -166,7 +182,7 @@ main = () => {
     verticalArrow(processor.x+(processor.width/2)-3,driver.y+driver.height+10,14);
     verticalArrow(controller.x+(controller.width/2)-3,device.y+device.height+10,14);
     verticalArrow(dma.x+(dma.width/2)-3,controller.y+controller.height+10,17);
-    horizontalArrow(driver.x+driver.width + 40,driver.y,20);
+    diagonalArrow();
 }
 
 main();
