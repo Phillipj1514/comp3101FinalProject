@@ -192,6 +192,7 @@ main = () => {
     drawComponent(busFromProcessor);
     drawComponent(busFromMemory);
     drawComponent(busFromDma);
+    horizontalArrow(os.x+os.width+16,os.y+(os.height/2)-15, 12);
     verticalArrow(processor.x+(processor.width/2)-3,driver.y+driver.height+10,14);
     verticalArrow(controller.x+(controller.width/2)-3,device.y+device.height+10,14);
     verticalArrow(dma.x+(dma.width/2)-3,controller.y+controller.height+10,17);
