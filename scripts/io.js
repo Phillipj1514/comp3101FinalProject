@@ -152,19 +152,20 @@ function horizontalArrow(x,y,scale) {
     context.fill();
 }
 
-// Function to draw a diagonal double-headed arrow
-function diagonalArrow() {
+// Function to draw a diagonal double-headed arrow at pos(x,y)
+function diagonalArrow(x,y) {
+    let xdif = x-315, ydif = y-88;
     context.beginPath();
-    context.moveTo(315,88);
-    context.lineTo(348,70);
-    context.lineTo(340,100);
-    context.lineTo(448,205);
-    context.lineTo(455,170);
-    context.lineTo(465,235);
-    context.lineTo(435,260);
-    context.lineTo(442,230);
-    context.lineTo(335,125);
-    context.lineTo(327,155);
+    context.moveTo(315+xdif,88+ydif);
+    context.lineTo(348+xdif,70+ydif);
+    context.lineTo(340+xdif,100+ydif);
+    context.lineTo(448+xdif,205+ydif);
+    context.lineTo(455+xdif,170+ydif);
+    context.lineTo(470+xdif,240+ydif);
+    context.lineTo(435+xdif,260+ydif);
+    context.lineTo(442+xdif,230+ydif);
+    context.lineTo(335+xdif,125+ydif);
+    context.lineTo(327+xdif,155+ydif);
     context.fill();
 }
 
@@ -182,7 +183,8 @@ main = () => {
     verticalArrow(processor.x+(processor.width/2)-3,driver.y+driver.height+10,14);
     verticalArrow(controller.x+(controller.width/2)-3,device.y+device.height+10,14);
     verticalArrow(dma.x+(dma.width/2)-3,controller.y+controller.height+10,17);
-    diagonalArrow();
+    diagonalArrow(313,88);
+    diagonalArrow(313,300);
 }
 
 main();
