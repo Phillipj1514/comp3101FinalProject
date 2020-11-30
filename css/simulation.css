@@ -1,0 +1,65 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-flow: column;
+}
+.navbar{
+    background-color: #FAFAF8 !important;
+    color: #B56D5D;
+}
+
+.navbar-brand, .nav-link{ color: #B56D5D !important;}
+
+.m-content{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.text-region{
+    border: 1px solid black;
+    width: 20%;
+    height: 100%;
+    background-color: #FAFAF8;
+    padding: 1rem;
+    color: #B56D5D;
+}
+
+.sim-region{
+    border: 1px solid black;
+    width: 80%;
+    height: 100%;
+    position: relative;
+    background-color: #dad8d8; 
+}
+
+.simulation-content{
+    height: 85%;
+}
+
+.control-btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #D6C576;
+    padding: 0.5rem;
+    padding-top: 1rem;
+}
+
+.control-btns a, .control-btn a:hover{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    color: white;
+}
+
+.control-btn{   
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0rem 4rem;
+}
+
