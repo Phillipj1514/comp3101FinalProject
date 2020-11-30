@@ -1,6 +1,4 @@
 var canvas = document.querySelector('canvas')
-var narration = document.getElementById('narration')
-narration.innerHTML = "Lorus Ipsum";
 
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
