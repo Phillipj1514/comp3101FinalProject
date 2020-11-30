@@ -1,0 +1,118 @@
+.sim-component{
+    margin: 1rem;
+    padding: 1rem;
+   
+}
+
+.sim-component:hover{
+    background-color: #D6C576;
+}
+
+.sim-component img{
+    width: 4rem;
+    height: auto;
+}
+
+.comp-processor{
+    position: absolute;
+    left: 45%;
+    top: 13rem;
+}
+
+.comp-dma{
+    position: absolute;
+    left: 80%;
+    bottom: 8rem;
+}
+
+.comp-memory{
+    position: absolute;
+    left: 10%;
+    bottom: 8rem;
+}
+
+.comp-dc{
+    position: absolute;
+    left: 80%;
+    top: 13rem;
+}
+
+.comp-device{
+    position: absolute;
+    left: 80%;
+    top: 1rem;
+}
+
+.comp-driver{
+    position: absolute;
+    left: 10%;
+    top: 13rem;
+}
+
+.comp-os{
+    position: absolute;
+    left: 10%;
+    top: 1rem;
+}
+
+.horizontal-flow{
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+    height: 2rem;
+}
+
+.vertical-flow{
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    width: 2rem;
+}
+
+.iobus{
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    bottom: 11rem;
+}
+
+.iobus2{
+    height: 9rem;
+    position: absolute;
+    left:49%;
+    bottom: 13rem;
+}
+
+.driverflow{
+    width: 27%;
+    position: absolute;
+    left: 20%;
+    top: 16rem;
+}
+
+.dcflow{
+    height: 7rem;
+    position: absolute;
+    left:84%;
+    bottom: 15rem;   
+}
+
+.deviceflow{
+    height: 6rem;
+    position: absolute;
+    left:84%;
+    top:9rem;   
+}
+
+.os2driverflow{
+    height: 6rem;
+    position: absolute;
+    left:14%;
+    top:8rem;   
+}
+
+.processor_to_dc_flow{
+    width: 20rem;
+    position: absolute;
+    left: 55%;
+    top: 16rem;
+}
+

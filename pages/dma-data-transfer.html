@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <Title>Comp3101 Final Project</Title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/simulation.css">
+    <link rel="stylesheet" href="../css/comp_pos.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">I/O System simulation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section class="m-content">
+        <div class="text-region">
+            <h1>Text</h1>
+        </div>
+
+        <div class="sim-region">
+            <div class="simulation-content">
+
+                <!-- Components -->
+
+                <div class="sim-component comp-processor">
+                    <!-- Processor Component -->
+                    <img src="../images/icons/svg/processor.svg">
+                </div>
+
+                <div class="sim-component comp-dma">
+                    <!-- DMA Component -->
+                    <img src="../images/icons/svg/dma.svg">
+                </div>
+
+                <div class="sim-component comp-memory">
+                    <!-- memory Component -->
+                    <img src="../images/icons/svg/memory.svg">
+                </div>
+
+                <div class="sim-component comp-dc">
+                    <!-- device controller Component -->
+                    <img src="../images/icons/svg/device-controller.svg">
+                </div>
+
+                <div class="sim-component comp-device">
+                    <!-- device Component -->
+                    <img src="../images/icons/svg/device.svg">
+                </div>
+
+                <div class="sim-component comp-driver">
+                    <!-- driver Component -->
+                    <img src="../images/icons/svg/driver.svg">
+                </div>
+
+                <div class="sim-component comp-os">
+                    <!-- os Component -->
+                    <img src="../images/icons/svg/os.svg">
+                </div>
+
+                <!-- Data Busses and data flow -->
+                <div class="horizontal-flow iobus ">
+                    <!-- Memory to dma -->
+                    <!-- <h3>Memory Bus</h3> -->
+                </div>
+
+                <div class="vertical-flow iobus2 ">
+                    <!-- processor to dma and memory -->
+                    <h3></h3>
+                </div>
+
+
+                <div class="horizontal-flow driverflow">
+                    <!-- driver to processor -->
+                    <h3></h3>
+                </div>
+
+                <div class="vertical-flow dcflow">
+                    <!-- driver controller to dmar -->
+                    <h3></h3>
+                </div>
+
+                <div class="vertical-flow deviceflow">
+                    <!-- driver controller to device -->
+                    <h3></h3>
+                </div>
+
+                <div class="vertical-flow os2driverflow">
+                    <!-- os to driver -->
+                    <h3></h3>
+                </div>
+
+                <div class="horizontal-flow processor_to_dc_flow">
+                    <!-- os to driver -->
+                    <h3></h3>
+                </div>
+
+
+            </div>
+            <div class="control-btns">
+                <a href="#"><img class="control-btn" src="../images/icons/svg/back.svg"> <P>Previous</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/play.svg"> <P>Play</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/stop.svg"> <P>Stop</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/next.svg"> <P>Next</P></a>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Bootstrap -->
+    <script src="bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
