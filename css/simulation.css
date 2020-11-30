@@ -33,6 +33,7 @@ body{
     height: 666.4px;
     position: relative;
     background-color: #dad8d8; 
+    cursor:url(../images/icons/png/cursor.png), auto;
 }
 
 .simulation-content{
