@@ -20,8 +20,8 @@ canvas{
 
 #dma{
     position: absolute;
-    top: 12em;
-    left: 34.4em;
+    top: 27em;
+    left: 45em;
 }
 
 #processor{
@@ -30,10 +30,15 @@ canvas{
     left: 14.2em;
 }
 
+#memory{
+    position: absolute;
+    top: 27em;
+    left: 1em;
+}
+
 #narration{
     grid-area: 1 / 1 / 2 / 2;
     margin: 1em;
-    color: #2e92e4;
 }
 
 header{
@@ -52,13 +57,15 @@ main{
 #dma_body{
     position:absolute;
     z-index: 1;
-    top: 262px;
-    left: 1087px;
+    top: 38.5em;
+    left: 62.65em;
     color: #aaaaaa;
     font-size: 12px;
 }
-#cpu_body{
+#memory_label{
     position: absolute;
-    top: 180px;
-    left: 700px;
+    top: 27em;
+    left: 5em;
 }
+
+
