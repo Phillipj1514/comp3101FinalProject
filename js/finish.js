@@ -396,7 +396,7 @@ function thirdframe(restart){
         c.clearRect(0, 0, innerWidth, innerHeight)
         clearindex = 0;
     }
-    narration.innerHTML = "<strong> Part 3</strong><br><br>Move data from kernel buffer to user buffer and wakeup blocked process. The user process then continues and the driver is updated that the process was completed "
+    narration.innerHTML = "<strong> Part 3</strong><br><br>Move data from kernel buffer to user buffer and wakeup blocked process, <em>represented by the red shading</em>. The user process then continues and the driver is updated that the process was completed "
 
     document.getElementById("dma").style.fillOpacity = .04;
     //cpu to os
