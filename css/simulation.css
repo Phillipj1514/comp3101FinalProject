@@ -37,7 +37,8 @@ body{
 }
 
 .simulation-content{
-    height: 85%;
+    height: 564px;
+    width: 1226px;
 }
 
 .control-btns{
@@ -62,5 +63,13 @@ body{
     height: 1.5rem;
     width: 1.5rem;
     margin: 0rem 4rem;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.visibile{
+    visibility: visible;
 }
 

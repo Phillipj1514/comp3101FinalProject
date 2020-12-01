@@ -2,7 +2,7 @@
     display: flex;
 }
 .legend div img{
-    width: 3rem;
+    width: 2rem;
     height: auto;
     margin: 3px;
     margin-right: 1rem;
@@ -15,6 +15,7 @@
 .sim-component{
     margin: 1rem;
     padding: 1rem;
+    border-radius: 2rem;
    
 }
 
@@ -29,6 +30,35 @@
 
 .sim-component p{
     text-align: center;
+}
+
+#comp-data{
+    position: absolute;
+    left: 0px;
+    top: 1rem;
+    margin: .2rem;
+    padding: .2rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    background-color: white;
+    display: flex;
+    flex-flow: row;
+}
+
+#comp-data p{
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#comp-data:hover{
+    background-color: #C4B1A6;
+    border: 2px solid #C4B1A6;
+}
+
+#comp-data img{
+    width: 1.5rem;
+    height: auto;
 }
 
 .comp-processor{
