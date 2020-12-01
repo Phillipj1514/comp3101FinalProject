@@ -1,0 +1,101 @@
+/* html, body{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    display: grid;
+    grid-template: 10% 90% / 1fr;
+}
+*/
+canvas{
+    z-index: 1;
+    position: absolute;
+    top: auto;
+    left: auto;
+    height: 80%;
+}
+
+#imgs{
+    position: relative;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#dma{
+    position: absolute;
+    top: 27em;
+    left: 55em;
+}
+
+#processor{
+    position: absolute;
+    top: 12.45em;
+    left: 26.2em;
+}
+
+#memory{
+    position: absolute;
+    top: 27em;
+    left: 1em;
+    transform: rotate(-45deg);
+}
+
+#device{
+    position: absolute;
+    top: 3em;
+    left: 54.85em;
+    transform: rotate(135deg);
+}
+
+#driver{
+    position: absolute;
+    top: 1em;
+    left: 26.2em;
+}
+
+#device-controller{
+    position: absolute;
+    top: 12.45em;
+    left: 55em;
+}
+
+#os{
+    position: absolute;
+    top: 12.45em;
+    left: 1em;
+}
+
+#dma_body{
+    position:absolute;
+    z-index: 1;
+    top: 39.5em;
+    left: 76em;
+    color: #aaaaaa;
+    font-size: 12px;
+}
+#memory_label{
+    position: absolute;
+    font-size: 18px;
+    top: 22em;
+    left: 2em;
+}
+
+#driver_label{
+    position: absolute;
+    font-size: 18px;
+    top: 0;
+    left: 23em; 
+}
+
+#device_label{
+    position: absolute;
+    font-size: 18px;
+    top: 0;
+    left: 49em;  
+}
+
+#controller_label{
+    position: absolute;
+    font-size: 18px;
+    top: 13em;
+    left: 56em; 
+}
