@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <Title>Comp3101 Final Project</Title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/simulation.css">
+    <link rel="stylesheet" href="../css/comp_pos.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">I/O System simulation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section class="m-content">
+        <div class="text-region">
+            <div class="legend">
+                <h5>Legend: </h5>
+                <div><img src="../images/icons/svg/data-code.svg"> 
+                    <p>- This represents the data transfering</p>
+                </div>
+            </div>
+            <!-- The action happening that will be changed -->
+            <div class="action-text">
+                <h5>Actions</h5>
+                <div id="text-explain">
+                    - To start the simulation press the play button
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sim-region">
+            <div class="simulation-content">
+
+                <!-- Components -->
+
+                <div id="comp-data">
+                    <!-- Data Component -->
+                    <img src="../images/icons/svg/data-code.svg">
+                    <p id="comp-data-label"></p>
+                </div>
+
+                <div class="sim-component comp-processor">
+                    <!-- Processor Component -->
+                    <img src="../images/icons/svg/processor.svg">
+                    <p>Processor</p>
+                </div>
+
+                <div class="sim-component comp-dma">
+                    <!-- DMA Component -->
+                    <img src="../images/icons/svg/dma.svg">
+                    <p>DMA</p>
+                </div>
+
+                <div class="sim-component comp-memory">
+                    <!-- memory Component -->
+                    <img src="../images/icons/svg/memory.svg">
+                    <p>Memory</p>
+                </div>
+
+                <div class="sim-component comp-dc">
+                    <!-- device controller Component -->
+                    <img src="../images/icons/svg/device-controller.svg">
+                    <p>Device Controller</p>
+                </div>
+
+                <div class="sim-component comp-device">
+                    <!-- device Component -->
+                    <img src="../images/icons/svg/device.svg">
+                    <p>Device</p>
+                </div>
+
+                <div class="sim-component comp-driver">
+                    <!-- driver Component -->
+                    <img src="../images/icons/svg/driver.svg">
+                    <p>Driver</p>
+                </div>
+
+                <div class="sim-component comp-os">
+                    <!-- os Component -->
+                    <img src="../images/icons/svg/os.svg">
+                    <p>OS</p>
+                </div>
+
+                <!-- Data Busses and data flow -->
+                <div class="horizontal-flow iobus ">
+                    <!-- Memory to dma -->
+                    <!-- <h3>Memory Bus</h3> -->
+                </div>
+
+                <div class="vertical-flow iobus2 ">
+                    <!-- processor to dma and memory -->
+                    <h3></h3>
+                </div>
+
+
+                <div class="horizontal-flow driverflow">
+                    <!-- driver to processor -->
+                    <h3></h3>
+                </div>
+
+                <div class="vertical-flow dcflow">
+                    <!-- driver controller to dmar -->
+                    <h3></h3>
+                </div>
+
+                <div class="vertical-flow deviceflow">
+                    <!-- driver controller to device -->
+                    <h3></h3>
+                </div>
+
+                <div class="vertical-flow os2driverflow">
+                    <!-- os to driver -->
+                    <h3></h3>
+                </div>
+
+                <div class="horizontal-flow processor_to_dc_flow">
+                    <!-- os to driver -->
+                    <h3></h3>
+                </div>
+
+
+            </div>
+            <div class="control-btns">
+                <a href="#"><img class="control-btn" id="prev_btn" src="../images/icons/svg/back.svg"> <P>Previous</P></a>
+                <a href="javascript:void(0);"><img class="control-btn" id="play_btn" src="../images/icons/svg/play.svg"> <P>Play</P></a>
+                <a href="javascript:void(0);"><img class="control-btn" id="stop_btn" src="../images/icons/svg/stop.svg"> <P>Stop</P></a>
+                <a href="#"><img class="control-btn" id="next_btn"src="../images/icons/svg/next.svg"> <P>Next</P></a>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Bootstrap -->
+    <script src="../bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dma-data-transfer.js"></script>
+</body>
