@@ -1,12 +1,20 @@
+/*
+    Written by Nathaniel Bedassie
+    December 1st, 2020
+*/
+
 var canvas = document.querySelector('canvas')
 var narration = document.getElementById('narration')
 
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
+//Used to indicate which animation sequence to play
 var playindex = 0;
+//Used to indicate when to clear the canvas
 var clearindex = false;
 
+//Contains function names to reference animation frames with
 var functions = [
     firstframe,
     secondframe,
@@ -16,6 +24,7 @@ var functions = [
 var c = canvas.getContext("2d");
 var doanim = true
 
+//USED TO DRAW CIRCUIT LINES
 function build(){
     //cpu to os
     c.beginPath();
@@ -96,11 +105,13 @@ function build(){
     c.stroke();
 }
 
+//VALUES FOR ANIMATION
 var data_x = 1183
 var device_y = 159
 var controller_y = 382
 var dma_cpu_y = 650
 
+//FIRST ANIMATION SEQUENCE
 function firstframe(restart){
     if(!doanim){context=null; return;}
     requestAnimationFrame(firstframe)
@@ -244,6 +255,7 @@ function firstframe(restart){
     }
 }
 
+//SECOND ANIMATION FRAME
 function secondframe(restart){
     if(!doanim){context=null; return;}
     requestAnimationFrame(secondframe)
@@ -335,7 +347,7 @@ function secondframe(restart){
     c.stroke(); 
 
     //message
-    if(data_x > 645){
+    if(data_x > 645 && dma_cpu_y >400){
         c.beginPath()
             c.arc(data_x, 650, 4, 0, Math.PI * 2, false);
             c.strokeStyle = "#000000"
@@ -349,7 +361,7 @@ function secondframe(restart){
         c.arc(data_x, dma_cpu_y, 4, 0, Math.PI * 2, false);
         c.strokeStyle = "#000000"
         c.stroke()
-        console.log(data_x, dma_cpu_y)
+        //console.log(data_x, dma_cpu_y)
 
         if(dma_cpu_y > 400){
             dma_cpu_y -= 6;
@@ -362,7 +374,7 @@ function secondframe(restart){
         c.arc(data_x, dma_cpu_y, 4, 0, Math.PI * 2, false);
         c.strokeStyle = "#00ff00"
         c.stroke()
-        console.log(data_x, dma_cpu_y)
+        //console.log(data_x, dma_cpu_y)
         if(dma_cpu_y < 650){
             dma_cpu_y += 6;
         }  
@@ -387,17 +399,17 @@ function secondframe(restart){
     }
 }
 
+//THIRD ANIMATION FRAME
 function thirdframe(restart){
     if(!doanim){context=null; return;}
     requestAnimationFrame(secondframe)
-
 
     if(restart == 1){
         c.clearRect(0, 0, innerWidth, innerHeight)
         clearindex = 0;
     }
-    narration.innerHTML = "<strong> Part 3</strong><br><br>Move data from kernel buffer to user buffer and wakeup blocked process, <em>represented by the red shading</em>. The user process then continues and the driver is updated that the process was completed "
-
+    narration.innerHTML = "<strong> Part 3</strong><br><br>Move data from kernel buffer to user buffer and wakeup blocked process, <em>represented by the red shading</em>. The user process then continues and the driver is updated that the process was completed.";
+    //console.log("thrid frame");
     document.getElementById("dma").style.fillOpacity = .04;
     //cpu to os
     c.beginPath();
@@ -478,12 +490,12 @@ function thirdframe(restart){
     c.stroke(); 
 
     //message
-    if(dma_cpu_y >= 650 && data_x <= 645){
+    if(dma_cpu_y >= 650 && data_x <= 620){
         c.beginPath()
         c.arc(data_x, dma_cpu_y, 4, 0, Math.PI * 2, false);
         c.strokeStyle = "#ff0000"
         c.stroke()
-        console.log(data_x, dma_cpu_y)
+        //console.log(data_x, dma_cpu_y)
         if(data_x < 620){
             data_x += 6;
         }  
@@ -508,12 +520,15 @@ function thirdframe(restart){
     }
 }
 
+//TRANSPORT CONTROLS
 var play = document.getElementById('play')
 var stop = document.getElementById('stop')
 var back = document.getElementById('back')
 var next = document.getElementById('next')
 
 build()
+
+//ASSIGNING LISTENERS
 play.addEventListener('click', ()=>{
     c = canvas.getContext("2d");
     doanim = true;
