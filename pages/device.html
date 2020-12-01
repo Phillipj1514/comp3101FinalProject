@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <Title>Comp3101 Final Project</Title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/simulation.css">
+    <link rel="stylesheet" href="../css/comp_pos.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Process Request</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section class="m-content">
+        <div class="text-region">
+           
+            <!-- The action happening that will be changed -->
+            <div class="action-text">
+                <h5>Text</h5>
+                <div id="text-explain">
+
+                    When a process request the use of an I/O device the cpu issues a read command to the I/O module while it is
+                    processing another request. The interrupt from a periphereal device reads the status of the I/O module and 
+                    the I/O module reads the status and sends a signal to the cpu. The cpu then checks to see if the request is 
+                    indeed correct. If the request is correct then the cpu reads the request from the I/O module.The cpu then writes 
+                    the request into memory. If the resquest is finish processing, the cpu goes to the next instruction otherwise it 
+                    goes back to the beginning of the process.
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="sim-region">
+            <div class="simulation-content">
+                <canvas></canvas>
+                <!-- Components -->
+
+                <div class="sim-component comp-processor">
+                    <!-- Processor Component -->
+                    <img src="../images/icons/svg/processor.svg">
+                    <p>Processor</p>
+                </div>
+
+               
+                
+                <div class="sim-component comp-dc">
+                    <!-- device Component -->
+                    <img src="../images/icons/svg/device.svg">
+                    <p>Device</p>
+                </div>
+
+               
+
+                <div class="sim-component comp-driver">
+                    <!-- memory Component -->
+                    <img src="../images/icons/svg/memory.svg">
+                    <p>Memory</p>
+
+                </div>
+
+
+
+            </div>
+            <div class="control-btns">
+                <a href="#"><img class="control-btn" src="../images/icons/svg/back.svg"> <P>Previous</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/play.svg"> <P>Play</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/stop.svg"> <P>Stop</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/next.svg"> <P>Next</P></a>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Bootstrap -->
+    
+
+    
+    <script src="../js/process.js"></script>
+</body>

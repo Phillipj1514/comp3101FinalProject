@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+    <Title>Comp3101 Final Project</Title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/simulation.css">
+    <link rel="stylesheet" href="../css/comp_pos.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Receiving and Sending Request to Device Controller</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <section class="m-content">
+        <div class="text-region">
+           
+            <!-- The action happening that will be changed -->
+            <div class="action-text">
+                <h5>Text</h5>
+                <div id="text-explain">
+                 A device controller receives the request from a connected device and stores it temporarily
+                in some special purpose register inside the controller. Then it communicates the request with a device driver. 
+                For each device controller,the device controller communicates with the operating system through interrupts. 
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sim-region">
+            <div class="simulation-content">
+                <canvas> </canvas>
+                <!-- Components -->
+
+                <div class="sim-component comp-processor">
+                    <!-- Processor Component -->
+                    <img src="../images/icons/svg/device-controller.svg">
+                    <p>Device controller</p>
+                </div>
+
+               
+                
+                <div class="sim-component comp-dc">
+                    <!-- device Component -->
+                    <img src="../images/icons/svg/device.svg">
+                    <p>Device</p>
+                </div>
+
+               
+
+                <div class="sim-component comp-driver">
+                    <!-- cpu Component -->
+                    <img src="../images/icons/svg/driver.svg">
+                    <p>driver</p>
+                </div>
+
+              
+            </div>
+            <div class="control-btns">
+                <a href="#"><img class="control-btn" src="../images/icons/svg/back.svg"> <P>Previous</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/play.svg"> <P>Play</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/stop.svg"> <P>Stop</P></a>
+                <a href="#"><img class="control-btn" src="../images/icons/svg/next.svg"> <P>Next</P></a>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Bootstrap -->
+    <script src="../js/controller.js"></script>
+    
+</body>

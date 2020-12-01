@@ -3,8 +3,8 @@ var canvas = document.querySelector('canvas')
 
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
-
 var c = canvas.getContext("2d");
+
 var a=true; 
 
 function build(){
@@ -34,26 +34,28 @@ function build(){
 
 }
 
-var x = 325                     //smaller value
+var x = 1050               //smaller value
 function animate(){
     requestAnimationFrame(animate)
+    build();
     c.clearRect(0, 0, innerWidth, innerHeight)
     
     c.beginPath();
     c.lineWidth = 7;
-    c.moveTo(325,240)// moves the starting point 
-    c.lineTo(550,240)// represents end points
+    c.moveTo(220,270)// moves the starting point 
+    c.lineTo(1050,270)// represents end points
     c.strokeStyle = "#ce9417"
     c.stroke();
 
     
     c.beginPath()
-    c.arc(x, 240, 4, 0, Math.PI * 2, false);
+    c.arc(x, 270, 4, 0, Math.PI * 2, false);
     c.strokeStyle = "#2e92e4"
     c.stroke()
-    if(x < 550){ // makes it move sir  //left to right larger value ,less than sign 
-        x += 4; // minus makes it go far left
+    if(x > 220){ // makes it move sir  //left to right larger value ,less than sign 
+        x -= 1; // minus makes it go far left
     }
 }
-
+build();
 animate();
+

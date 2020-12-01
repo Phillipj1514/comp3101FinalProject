@@ -5,6 +5,9 @@ body{
     display: flex;
     flex-flow: column;
 }
+canvas{
+    z-index:1;
+}
 .navbar{
     background-color: #FAFAF8 !important;
     color: #B56D5D;
