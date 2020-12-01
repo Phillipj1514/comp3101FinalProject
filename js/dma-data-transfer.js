@@ -87,68 +87,73 @@ $(document).ready(function(){
         performAction(data_element,
             "DMA request(DRQ)",
             { top: "28rem" },
-            1000,
+            2000,
             2000,
             `Device controller issues a DMA request 
-            (DRQ) to the DMA Controller if the Device 
-            controller’s Status Register indicates a ready state`, true);
+             (DRQ) to the DMA Controller.`, true);
 
         // Send a Hold request to the cpu
         performAction(data_element,
             "Hold Request(HRQ)",
             { left: "48.5%" },
-            1000,
+            3000,
             500,
-            `Issues a Hold request to the cpu befor filling its buffer`);
+            `If the device controller Status Register indicates a ready state, 
+            the DMA issues a Hold request to the CPU before filling its buffer.`);
 
         performAction(data_element,
             "Hold Request(HRQ)",
             { top: "19rem" },
-            1000,
+            1500,
             3000,
-            `Issues a Hold request to the cpu befor filling its buffer`, true);
+            `If the device controller Status Register indicates a ready state, 
+            the DMA issues a Hold request to the CPU before filling its buffer.`, true);
 
         // DMA fill its buffer with the data from the device controller
         reposition(data_element,{ "left": "83.7%", "top": "19rem"});
         performAction(data_element,
             "<blocks of data> ",
             { top: "28rem" },
-            700,
-            300,
-            `DMA controller starts to fill its buffer buffer while it waits on an acknowedgement from the cpu`);
-
-        reposition(data_element,{ "left": "83.7%", "top": "19rem"});
-        performAction(data_element,
-            "<blocks of data> ",
-            { top: "28rem" },
-            700,
-            300,
-            `DMA controller starts to fill its buffer buffer while it waits on an acknowedgement from the cpu`);
-
-        reposition(data_element,{ "left": "83.7%", "top": "19rem"});
-        performAction(data_element,
-            "<blocks of data> ",
-            { top: "28rem" },
-            700,
             1000,
-            `DMA controller starts to fill its buffer buffer while it waits on an acknowedgement from the cpu`);
+            300,
+            `The DMA controller starts to fill its buffer while it 
+            waits on an acknowedgement from the CPU`);
+
+        reposition(data_element,{ "left": "83.7%", "top": "19rem"});
+        performAction(data_element,
+            "<blocks of data> ",
+            { top: "28rem" },
+            1000,
+            300,
+            `The DMA controller starts to fill its buffer while it 
+            waits on an acknowedgement from the CPU`);
+
+        reposition(data_element,{ "left": "83.7%", "top": "19rem"});
+        performAction(data_element,
+            "<blocks of data> ",
+            { top: "28rem" },
+            1000,
+            1000,
+            `The DMA controller starts to fill its buffer while it 
+            waits on an acknowedgement from the CPU`);
 
         
         // When the bus is available the processor set the dma registers
         reposition(data_element,{ "left": "48.5%", "top": "19rem"});
         performAction(data_element,
-            "<HLDA>",
+            "Register values",
             { top: "28rem" },
             1000,
             300,
             `The CPU initializes the Start Address Register (target address), 
-            Word Count Register, source address and the type of operation to be performed by the DMA Controller`);
+            Word Count Register, source address and the type of operation to be performed by the DMA Controller.
+             This is programming the DMA`);
         
         performAction(data_element,
-            "<HLDA>",
+            "Register values",
             { left: "83.7%" },
             1500,
-            1000,
+            2000,
             `The CPU initializes the Start Address Register (target address), 
             Word Count Register, source address and the type of operation to be performed by the DMA Controller.
              This is programming the DMA`, true);
@@ -156,7 +161,7 @@ $(document).ready(function(){
         // When the bus is available and the dma programmedthe processor sends a acknowledgemnt the dma
         reposition(data_element,{ "left": "48.5%", "top": "19rem"});
         performAction(data_element,
-            "<HLDA>",
+            "Hold Acknowledgement <HLDA>",
             { top: "28rem" },
             1000,
             300,
@@ -164,7 +169,7 @@ $(document).ready(function(){
             to indicate that it can perform the data transfer on the bus to the memory. `);
         
         performAction(data_element,
-            "<HLDA>",
+            "Hold Acknowledgement <HLDA>",
             { left: "83.7%" },
             1500,
             1000,
@@ -176,7 +181,7 @@ $(document).ready(function(){
         performAction(data_element,
             "<Block of data>",
             { left: "13%" },
-            3000,
+            4000,
             500,
             `The DMA now have contol over the bus along with the CPU. It then transfers the data to the memory.
             This is done by stealing cycles from the processor (cycle stealing) to the memory. Therefore, the processor works in
@@ -186,7 +191,7 @@ $(document).ready(function(){
         performAction(data_element,
             "<Block of data>",
             { left: "13%" },
-            3000,
+            4000,
             2000,
             `The DMA now have contol over the bus along with the CPU. It then transfers the data to the memory.
             This is done by stealing cycles from the processor (cycle stealing) to the memory. Therefore, the processor works in
@@ -199,13 +204,15 @@ $(document).ready(function(){
             { left: "48.5%" },
             2000,
             400,
-            `The processor was blocked while the DMA uses the bus and got a chance after a while`);
+            `The processor was blocked while the DMA uses the bus and got a chance after the DMA took a break. 
+            This is call process blocking.`);
         performAction(data_element,
             "<Block of data>",
             { top: "19rem" },
             1000,
             1000,
-            `The processor was blocked while the DMA uses the bus and got a chance after a while`, true);
+            `The processor was blocked while the DMA uses the bus and got a chance after the DMA took a break.
+             This is call process blocking.`, true);
 
         // The DMA continues its process
         reposition(data_element,{ "left": "83.7%", "top": "28rem"});
@@ -214,7 +221,7 @@ $(document).ready(function(){
             { left: "13%" },
             3000,
             2000,
-            `The DMA continue by sending its last block when the processor was finished`, true);
+            `The DMA continues by sending its last block when the processor finished its process.`, true);
 
         // End this section of the simulation
         data_element.fadeOut(0,function(){
