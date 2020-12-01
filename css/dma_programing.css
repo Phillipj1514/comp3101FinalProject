@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+#main-frame{
+    display: grid;
+    grid-template-areas: 
+    'navigation navigation'
+    'sidepanel centerPanel'
+    ;
+    grid-template-rows: 1fr 15fr;
+    grid-template-columns: 2fr 8fr;
+    
+}
+
+
+#navigation{
+    background-color: #D6C576; /*D6C576 , B56D5D*/
+    grid-area: navigation;
+    border: 1px solid #B56D5D;
+}
+
+#side-panel{
+    background-color: #BEC9B7;
+    grid-area: sidepanel;
+    border: 1px solid #B56D5D;
+    color:black;
+    font-weight: 600;
+}
+
+#center-panel{
+    background-color: #FAFAF8;
+    grid-area: centerPanel;
+    display: grid;
+    grid-template-areas: 
+    'canvasContainer'
+    'controlPanel'
+    ;
+    grid-template-rows: 7fr 1fr;
+    border: 1px solid #B56D5D;
+}
+
+#canvas-container{
+    grid-area: canvasContainer;
+    margin: auto auto;
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+#control-panel{
+    grid-area: controlPanel;
+    text-align: center;
+    font-size: large;
+    border-top: 2px solid #B56D5D;
+    display: grid;
+    grid-template-areas:
+    'back play stop next'
+    ;
+
+}
+
+.control{
+    padding-top: 40px;
+}
+
+#back-button{
+    background-color:wheat;
+    grid-area: back;
+}
+#play-button{
+    background-color: #BEC9B7;
+    grid-area: play;
+}
+#stop-button{
+    background-color: #BEC9B7;
+    grid-area: stop;
+}
+#next-button{
+    grid-area: next;
+    background-color:wheat;
+}
+
+
+.standard-padding{
+    padding: 10px;
+}
+
+canvas{
+    display: block;
+    
+}
+
+#play-button:hover{
+    background-color: #B56D5D;
+}
+#back-button:hover{
+    background-color: #B56D5D;
+}
+#stop-button:hover{
+    background-color: #B56D5D;
+}
+#next-button:hover{
+    background-color: #B56D5D;
+}
+
+.hidden{
+    visibility: hidden;
+}
