@@ -34,7 +34,7 @@
             <div class="action-text">
                 <h5>Actions</h5>
                 <div id="text-explain">
-                    - Please start the simulation by pressing the play button
+                    - To start the simulation press the play button
                 </div>
 
             </div>
@@ -44,6 +44,12 @@
             <div class="simulation-content">
 
                 <!-- Components -->
+
+                <div id="comp-data">
+                    <!-- Data Component -->
+                    <img src="../images/icons/svg/data-code.svg">
+                    <p id="comp-data-label"></p>
+                </div>
 
                 <div class="sim-component comp-processor">
                     <!-- Processor Component -->
@@ -127,16 +133,17 @@
 
             </div>
             <div class="control-btns">
-                <a href="#"><img class="control-btn" src="../images/icons/svg/back.svg"> <P>Previous</P></a>
-                <a href="#"><img class="control-btn" src="../images/icons/svg/play.svg"> <P>Play</P></a>
-                <a href="#"><img class="control-btn" src="../images/icons/svg/stop.svg"> <P>Stop</P></a>
-                <a href="#"><img class="control-btn" src="../images/icons/svg/next.svg"> <P>Next</P></a>
+                <a href="#"><img class="control-btn" id="prev_btn" src="../images/icons/svg/back.svg"> <P>Previous</P></a>
+                <a href="javascript:void(0);"><img class="control-btn" id="play_btn" src="../images/icons/svg/play.svg"> <P>Play</P></a>
+                <a href="javascript:void(0);"><img class="control-btn" id="stop_btn" src="../images/icons/svg/stop.svg"> <P>Stop</P></a>
+                <a href="#"><img class="control-btn" id="next_btn"src="../images/icons/svg/next.svg"> <P>Next</P></a>
             </div>
         </div>
 
     </section>
     
     <!-- Bootstrap -->
-    <script src="bootstrap/js/jquery-3.5.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/dma-data-transfer.js"></script>
 </body>
