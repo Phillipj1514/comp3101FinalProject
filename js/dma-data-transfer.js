@@ -205,14 +205,14 @@ $(document).ready(function(){
             2000,
             400,
             `The processor was blocked while the DMA uses the bus and got a chance after the DMA took a break. 
-            This is call process blocking.`);
+            This could be a case of somethign that  was needed by the processor that was causing the process tp be blocked`);
         performAction(data_element,
             "<Block of data>",
             { top: "19rem" },
             1000,
             1000,
             `The processor was blocked while the DMA uses the bus and got a chance after the DMA took a break.
-             This is call process blocking.`, true);
+            This could be a case of somethign that  was needed by the processor that was causing the process tp be blocked.`, true);
 
         // The DMA continues its process
         reposition(data_element,{ "left": "83.7%", "top": "28rem"});
