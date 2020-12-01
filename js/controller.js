@@ -8,7 +8,7 @@ var c = canvas.getContext("2d");
 var a=true; 
 
 function build(){
-//cpu to memory
+//Device controller to Driver
     c.beginPath();
     c.lineWidth = 7;
     c.moveTo(618,150)
@@ -23,7 +23,7 @@ function build(){
     c.strokeStyle = "#ce9417"
     c.stroke();
 
-    //cpu to device 
+    // Deiver controller to device 
     c.beginPath();
     c.lineWidth = 7;
     c.moveTo(697,347)
@@ -52,7 +52,7 @@ function animate(){
     c.arc(x, 270, 4, 0, Math.PI * 2, false);
     c.strokeStyle = "#2e92e4"
     c.stroke()
-    if(x > 220){ // makes it move sir  //left to right larger value ,less than sign 
+    if(x > 220){ // makes it move  //left to right larger value ,less than sign 
         x -= 1; // minus makes it go far left
     }
 }
