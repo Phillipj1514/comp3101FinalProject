@@ -10,8 +10,6 @@
 canvas{
     z-index: 1;
     position: absolute;
-    top: auto;
-    left: auto;
     height: 80%;
 }
 
