@@ -109,7 +109,7 @@ function firstframe(restart){
         c.clearRect(0, 0, innerWidth, innerHeight)
         clearindex = 0;
     }
-    narration.innerHTML = "<br><br>The device is now transferring its pages into memory through the DMA. <br> DMA Controller transfers bytes of data from its buffer into memory while decrementing its Word Count Register "
+    narration.innerHTML = "<strong> Part 1</strong><br><br>The device is now transferring its pages into memory through the DMA. <br> DMA Controller transfers bytes of data from its buffer into memory while decrementing its Word Count Register "
 
     //cpu to os
     c.beginPath();
@@ -250,7 +250,7 @@ function secondframe(restart){
         c.clearRect(0, 0, innerWidth, innerHeight)
         clearindex = 0;
     }
-    narration.innerHTML = "<br><br>When the Word Count Register value reaches zero (all data has been sent or received), the DMA Controller issues an interrupt to the processor, returning control of the bus until it is again made available for another transfer to occur. "
+    narration.innerHTML = "<strong> Part 2</strong><br><br>When the Word Count Register value reaches zero (all data has been sent or received), the DMA Controller issues an interrupt to the processor, returning control of the bus until it is again made available for another transfer to occur. "
 
     //cpu to os
     c.beginPath();
@@ -378,14 +378,22 @@ stop.addEventListener('click',()=>{
 
 next.addEventListener('click', ()=>{
     playindex += 1;
-    doanim = true
+    doanim = false
+    data_x = 1183
+    device_y = 159
+    controller_y = 382
+    dma_cpu_y = 650
     c.clearRect(0, 0, innerWidth, innerHeight)
     build();
 })
 
 back.addEventListener('click', ()=>{
     playindex -= 1;
-    doanim = true
+    doanim = false
+    data_x = 1183
+    device_y = 159
+    controller_y = 382
+    dma_cpu_y = 650
     c.clearRect(0, 0, innerWidth, innerHeight)
     build();
 })
