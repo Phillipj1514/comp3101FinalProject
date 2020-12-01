@@ -98,6 +98,7 @@ function build(){
 var data_x = 1183
 var device_y = 159
 var controller_y = 382
+var dma_cpu_y = 650
 
 function firstframe(restart){
     if(!doanim){context=null; return;}
@@ -105,7 +106,6 @@ function firstframe(restart){
     
     
     if(restart == 1){
-        console.log(restart)
         c.clearRect(0, 0, innerWidth, innerHeight)
         clearindex = 0;
     }
@@ -248,6 +248,7 @@ function secondframe(restart){
 
     if(restart == 1){
         c.clearRect(0, 0, innerWidth, innerHeight)
+        clearindex = 0;
     }
     narration.innerHTML = "<br><br>When the Word Count Register value reaches zero (all data has been sent or received), the DMA Controller issues an interrupt to the processor, returning control of the bus until it is again made available for another transfer to occur. "
 
@@ -328,6 +329,35 @@ function secondframe(restart){
     c.lineTo(1216,583)
     c.strokeStyle = "#ce9417"
     c.stroke(); 
+
+    //message
+    if(data_x > 645){
+        c.beginPath()
+            c.arc(data_x, 650, 4, 0, Math.PI * 2, false);
+            c.strokeStyle = "#2e92e4"
+            c.stroke()
+
+        if(data_x > 645){
+            data_x -= 6;
+        }
+    } else if(dma_cpu_y > 400){
+        c.beginPath()
+        c.arc(data_x, dma_cpu_y, 4, 0, Math.PI * 2, false);
+        c.strokeStyle = "#2e92e4"
+        c.stroke()
+
+        if(dma_cpu_y > 400){
+            dma_cpu_y -= 6;
+        } 
+    }
+    if(dma_cpu_y <= 400 && data_x <= 645){
+        clearindex = 1;
+        doanim = false;
+        data_x = 1183
+        device_y = 159
+        controller_y = 382
+        dma_cpu_y = 650
+    }
 }
 
 var play = document.getElementById('play')
@@ -348,6 +378,13 @@ stop.addEventListener('click',()=>{
 
 next.addEventListener('click', ()=>{
     playindex += 1;
+    doanim = true
+    c.clearRect(0, 0, innerWidth, innerHeight)
+    build();
+})
+
+back.addEventListener('click', ()=>{
+    playindex -= 1;
     doanim = true
     c.clearRect(0, 0, innerWidth, innerHeight)
     build();
