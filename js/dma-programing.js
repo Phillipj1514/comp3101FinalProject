@@ -337,6 +337,7 @@ drawComponents = () => {
     drawRect(cache);
     drawConnection(cpu_cac); // CPU to cache connection
     drawConnection(cac_mem); // Cache to Memory Bus
+    ctx.drawImage(memoryImg,memory.x, memory.y,memory.width,memory.height);
     drawRect(cpuToMemoryBus); 
     ctx.drawImage(dmaImg,dma.x,dma.y, dma.width,dma.height);
     drawRect(pciBus);
