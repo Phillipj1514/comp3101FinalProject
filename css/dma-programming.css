@@ -1,0 +1,85 @@
+html, body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-flow: column;
+}
+canvas{
+    z-index:1;
+    background-color:white;
+}
+h1{
+    padding-left: 10px;
+}
+p{
+    padding-top: 20px;
+}
+.navbar{
+    background-color: #FAFAF8 !important;
+    color: #B56D5D;
+}
+
+.navbar-brand, .nav-link{ color: #B56D5D !important;}
+
+.m-content{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.text-region{
+    border: 1px solid black;
+    width: 20%;
+    height: 100%;
+    background-color: #FAFAF8;
+    padding: 1rem;
+    color: #B56D5D;
+}
+
+.sim-region{
+    border: 1px solid black;
+    width: 1229px;
+    height: 666.4px;
+    position: relative;
+    background-color: #dad8d8; 
+    cursor:url(../images/icons/png/cursor.png), auto;
+}
+
+.simulation-content{
+    height: 564px;
+    width: 1226px;
+}
+
+.control-btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #D6C576;
+    padding: 0.5rem;
+    padding-top: 1rem;
+}
+
+.control-btns a, .control-btn a:hover{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    color: white;
+}
+
+.control-btn{   
+    height: 2rem;
+    width: 2rem;
+    margin: 0rem 4rem;
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.visibile{
+    visibility: visible;
+}
+
